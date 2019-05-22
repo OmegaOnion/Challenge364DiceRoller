@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-/**
+/*
  * Challenge #364 [Easy] Create a Dice Roller
  * I love playing D&D with my friends, and my favorite part is creating character sheets (my DM is notorious for
  * killing us all off by level 3 or so). One major part of making character sheets is rolling the character's stats.
@@ -10,7 +10,7 @@ import java.util.Scanner;
  * https://www.reddit.com/r/dailyprogrammer/comments/8s0cy1/20180618_challenge_364_easy_create_a_dice_roller/
  */
 
-/**
+/*
  * Input format: XdY
  * where X is the number of throws of the dice
  * where Y is the number of sides on the dice
@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        while (true){
+        while (true){ // to allow repeating game
             Scanner in = new Scanner(System.in);
             System.out.println("Enter dice roll (format: XdY):");
             String input = in.next();
@@ -43,7 +43,7 @@ public class Main {
      * @param s a string in format XdY
      * @return total value of all dice rolls
      */
-    public static int rollDice(String s){
+    private static int rollDice(String s){
         Scanner scan = new Scanner(s);
         scan.useDelimiter("d");
         // seperate data
