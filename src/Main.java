@@ -10,6 +10,17 @@ import java.util.Scanner;
  * https://www.reddit.com/r/dailyprogrammer/comments/8s0cy1/20180618_challenge_364_easy_create_a_dice_roller/
  */
 
+/**
+ * Input format: XdY
+ * where X is the number of throws of the dice
+ * where Y is the number of sides on the dice
+ * e.g. 1d6 would roll 1 traditional 6 sided die
+ * 3d20 would roll 3 20 sided die
+ * 100d100 wouldroll 100 dice with 100 sides
+ *
+ * output is the total value of these dice
+ */
+
 public class Main {
 
     public static void main(String[] args){
@@ -24,6 +35,14 @@ public class Main {
 
     }
 
+    /**
+     * seperates the needed data from the string
+     * then rolls a random number with the number of sides of the die/dice
+     * repeats for the number of dice to roll
+     * adds the values together as output
+     * @param s a string in format XdY
+     * @return total value of all dice rolls
+     */
     public static int rollDice(String s){
         Scanner scan = new Scanner(s);
         scan.useDelimiter("d");
